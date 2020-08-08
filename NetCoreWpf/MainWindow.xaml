@@ -1,0 +1,508 @@
+﻿<metroControls:MetroWindow
+    x:Class="NetCoreWpf.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+    xmlns:local="clr-namespace:NetCoreWpf"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:metroControls="http://metro.mahapps.com/winfx/xaml/controls"
+    Title="Login Window "
+    Width="960"
+    Height="540"
+    AllowsTransparency="True"
+    Background="Transparent"
+    BorderThickness="1.5"
+    GlowBrush="{DynamicResource Accent700S}"
+    ResizeMode="NoResize"
+    ShowCloseButton="False"
+    ShowMaxRestoreButton="False"
+    ShowMinButton="False"
+    ShowTitleBar="False"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid x:Name="RootGrid">
+        <Grid
+            x:Name="DragMoveGrid"
+            Background="White"
+            Opacity="0.01"
+            Visibility="Visible" />
+        <Image
+            x:Name="loginBGImage"
+            Source="/Resources/Images/background.png"
+            Stretch="UniformToFill"
+            Visibility="Collapsed" />
+
+        <Grid x:Name="AuroraGrid" Visibility="Collapsed">
+            <Label
+                Width="395"
+                Height="75"
+                Margin="75,70,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="A  U  R  O  R  A"
+                FontFamily="ANURATI"
+                FontSize="50"
+                Foreground="White" />
+            <TextBlock
+                Width="395"
+                Height="90"
+                Margin="75,150,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontFamily="Sofia"
+                FontSize="30"
+                FontWeight="Light"
+                Foreground="White"
+                Text="{DynamicResource LoginWindowText}"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Width="395"
+                Height="60"
+                Margin="75,278,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontFamily="Sofia"
+                FontSize="16"
+                FontWeight="Regular"
+                Foreground="White"
+                Text="{DynamicResource Loginwindow_WelcomeText}"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Width="395"
+                Height="132"
+                Margin="75,343,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontFamily="Sofia"
+                FontSize="15"
+                FontWeight="Light"
+                Foreground="White"
+                Text="{DynamicResource LoginWindow_WelcomeTextP2}"
+                TextWrapping="Wrap" />
+        </Grid>
+
+        <Grid x:Name="LoginCardGrid" Margin="292,0,292,0">
+            <Label
+                x:Name="LoginLabel"
+                Height="29"
+                Margin="25,204,25,0"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Content="{DynamicResource Login}"
+                FontFamily="Roboto"
+                FontSize="14"
+                Foreground="White" />
+            <TextBox
+                x:Name="LoginBox"
+                Height="35"
+                Margin="25,233,25,0"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Center"
+                Foreground="DarkGray"
+                Style="{DynamicResource TextBoxLoginStyle}"
+                TextWrapping="NoWrap" />
+            <PasswordBox
+                x:Name="PassBox"
+                Height="35"
+                Margin="25,314,25,0"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Center"
+                Foreground="DarkGray"
+                Style="{DynamicResource PassBoxLoginStyle}" />
+            <Label
+                x:Name="PassLabel"
+                Height="29"
+                Margin="25,284,25,0"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Content="{DynamicResource Password}"
+                FontFamily="Roboto"
+                FontSize="14"
+                Foreground="White" />
+            <Label
+                x:Name="AuroraLabelF"
+                Height="49"
+                Margin="10,55,10,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="A  U  R  O  R  A"
+                FontFamily="ANURATI"
+                FontSize="34"
+                Foreground="White" />
+            <Button
+                x:Name="LoginBtn"
+                Height="30"
+                Margin="25,384,25,0"
+                VerticalAlignment="Top"
+                Click="LoginBtn_Click"
+                Content="{DynamicResource Login}"
+                Foreground="White"
+                Style="{DynamicResource LoginBtnStyle}" />
+            <Label
+                x:Name="SignInLabel"
+                Height="54"
+                Margin="10,90,10,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource Sign In}"
+                FontFamily="Roboto"
+                FontSize="34"
+                Foreground="White"
+                Visibility="Collapsed" />
+        </Grid>
+
+        <Button
+            x:Name="ExitBtn"
+            Width="32"
+            Height="32"
+            Margin="0,10,24,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="ExitBtn_Click"
+            Foreground="White"
+            Style="{DynamicResource ExitBtnStyle}" />
+        <Button
+            x:Name="SettingsBtn"
+            Width="32"
+            Height="32"
+            Margin="0,10,56,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="SettingsBtn_Click"
+            Foreground="White"
+            Style="{DynamicResource SettingsBtnStyle}" />
+        <Button
+            x:Name="TrayBtn"
+            Width="32"
+            Height="32"
+            Margin="0,10,88,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="MinWindBtn_Click"
+            Foreground="White"
+            Style="{DynamicResource TrayBtnStyle}" />
+
+        <Grid
+            x:Name="SettingsSliderGrid"
+            Margin="990,0,-273,0"
+            Background="{DynamicResource Theme_2}"
+            Opacity="1">
+            <Grid.Effect>
+                <DropShadowEffect
+                    BlurRadius="15"
+                    Direction="-85"
+                    RenderingBias="Quality"
+                    ShadowDepth="2"
+                    Color="Black" />
+            </Grid.Effect>
+            <TextBox
+                x:Name="AdressTxtBox"
+                Width="140"
+                Height="19"
+                Margin="20,92,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Style="{DynamicResource DefaultTextBoxStyle}"
+                Text=""
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="PortTxtBox"
+                Height="19"
+                Margin="170,92,20,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                Style="{DynamicResource DefaultTextBoxStyle}"
+                Text=""
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="TimeoutTxtBox"
+                Height="19"
+                Margin="170,150,20,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                Style="{DynamicResource DefaultTextBoxStyle}"
+                Text=""
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="DatabaseTxtBox"
+                Width="140"
+                Height="19"
+                Margin="20,150,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Style="{DynamicResource DefaultTextBoxStyle}"
+                Text=""
+                TextWrapping="Wrap" />
+            <Button
+                x:Name="BackBtn"
+                Width="30"
+                Height="30"
+                Margin="20,20,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="BackBtn_Click"
+                Style="{DynamicResource BackBtnStyle}" />
+            <Label
+                Height="24"
+                Margin="20,68,80,0"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Content="{DynamicResource Adress}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="24"
+                Margin="170,68,20,0"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Content="{DynamicResource Port}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="24"
+                Margin="20,126,80,0"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Content="{DynamicResource Database}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="24"
+                Margin="170,126,20,0"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Content="{DynamicResource Timeout}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="34"
+                Margin="55,20,25,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource Settings}"
+                FontFamily="Roboto"
+                FontSize="20"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <CheckBox
+                x:Name="AuthSlider"
+                Width="50"
+                Height="32"
+                Margin="92,208,92,0"
+                VerticalAlignment="Top"
+                Content="CheckBox"
+                Style="{DynamicResource SliderCheckBox}" />
+            <Label
+                Height="24"
+                Margin="0,184,0,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource Authentication}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="24"
+                Margin="0,210,150,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource SQLAuthentication}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="24"
+                Margin="150,210,0,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource WindowsAuthentication}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <ComboBox
+                x:Name="ColorComboBox"
+                Height="25"
+                Margin="80,0,20,249"
+                VerticalAlignment="Bottom"
+                ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}"
+                Style="{DynamicResource DefaultComboBoxStyle}">
+                <ComboBoxItem
+                    Background="#FFC400"
+                    Content="Amber"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#2979FF"
+                    Content="Blue"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#00E5FF"
+                    Content="Cyan"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#FF3D00"
+                    Content="DeepOrange"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#651FFF"
+                    Content="DeepPurple"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#00E676"
+                    Content="Green"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#3D5AFE"
+                    Content="Indigo"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#00B0FF"
+                    Content="LightBlue"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#76FF03"
+                    Content="LightGreen"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#C6FF00"
+                    Content="Lime"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#FF9100"
+                    Content="Orange"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#F50057"
+                    Content="Pink"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#D500F9"
+                    Content="Purple"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#FF1744"
+                    Content="Red"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#1DE9B6"
+                    Content="Teal"
+                    Selected="ColorComboBox_Selected" />
+                <ComboBoxItem
+                    Background="#FFEA00"
+                    Content="Yellow"
+                    Selected="ColorComboBox_Selected" />
+            </ComboBox>
+            <Label
+                Height="24"
+                Margin="10,0,165,0"
+                VerticalAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource Color}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <CheckBox
+                x:Name="ThemeSlider"
+                Width="50"
+                Height="32"
+                Margin="92,0,92,179"
+                VerticalAlignment="Bottom"
+                Checked="ThemeSlider_Click"
+                Content="CheckBox"
+                Style="{DynamicResource SliderCheckBox}"
+                Unchecked="ThemeSlider_Click" />
+            <Label
+                Height="24"
+                Margin="0,0,0,211"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource Theme}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="24"
+                Margin="0,0,150,180"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource Light}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="24"
+                Margin="150,0,0,180"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource Dark}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Button
+                x:Name="SaveSettingsBtn"
+                Height="25"
+                Margin="20,0,20,42"
+                VerticalAlignment="Bottom"
+                Click="SaveSettingsBtn_Click"
+                Content="{DynamicResource Accept}"
+                Style="{DynamicResource LoginBtnStyle}" />
+            <CheckBox
+                x:Name="LanguageSlider"
+                Width="50"
+                Height="32"
+                Margin="92,0,92,113"
+                VerticalAlignment="Bottom"
+                Checked="LanguageSlider_Click"
+                Content="CheckBox"
+                Style="{DynamicResource SliderCheckBox}"
+                Unchecked="LanguageSlider_Click" />
+            <Label
+                Height="24"
+                Margin="0,0,0,145"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="{DynamicResource Language}"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="24"
+                Margin="0,0,150,113"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="Русский"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+            <Label
+                Height="24"
+                Margin="150,0,0,113"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                Background="Transparent"
+                Content="English"
+                FontFamily="Roboto"
+                FontSize="10"
+                Foreground="{DynamicResource ThemeForeground}" />
+        </Grid>
+
+
+
+    </Grid>
+</metroControls:MetroWindow>

@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="Theme_1" Color="#FF1B1B1C" />
+    <SolidColorBrush x:Key="Theme_2" Color="#FF2D2D30" />
+    <SolidColorBrush x:Key="Theme_3" Color="#FF3E3E40" />
+    <SolidColorBrush x:Key="ThemeForeground" Color="#FFF1F1F1" />
+    <Color x:Key="Theme_1_Color">#FF1B1B1C</Color>
+    <Color x:Key="Theme_2_Color">#FF2D2D30</Color>
+    <Color x:Key="Theme_3_Color">#FF3E3E40</Color>
+</ResourceDictionary>

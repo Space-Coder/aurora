@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="SQLCmdWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TablesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WorkspaceWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Amber.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Blue.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Cyan.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.DeepOrange.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.DeepPurple.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Green.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Indigo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.LightBlue.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.LightGreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Lime.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Orange.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Pink.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Purple.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Red.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Teal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Accent.Yellow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Theme.Dark.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\Colors\Theme.Light.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Controls\ControlsDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Languages\EN.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Languages\RU.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SQLCmdWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TablesWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WorkspaceWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

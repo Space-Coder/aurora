@@ -1,0 +1,69 @@
+﻿<metroControls:MetroWindow
+    x:Class="NetCoreWpf.TablesWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+    xmlns:local="clr-namespace:NetCoreWpf"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:metroControls="http://metro.mahapps.com/winfx/xaml/controls"
+    Title="Tables Window"
+    Width="304"
+    Height="414"
+    Background="{DynamicResource Theme_1}"
+    BorderThickness="1.5"
+    GlowBrush="{DynamicResource Accent700S}"
+    ResizeMode="NoResize"
+    ShowCloseButton="False"
+    ShowMaxRestoreButton="False"
+    ShowMinButton="False"
+    ShowTitleBar="False"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid x:Name="RootGrid">
+        <DataGrid
+            x:Name="tablesDataGrid"
+            Margin="0,45,0,81"
+            AutoGenerateColumns="True"
+            Background="{DynamicResource Theme_2}"
+            BorderBrush="{DynamicResource Accent400S}"
+            BorderThickness="0,0.5,0,0.5"
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            CanUserReorderColumns="False"
+            CellStyle="{DynamicResource CustomDataGridCell}"
+            ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeader}"
+            FrozenColumnCount="0"
+            GridLinesVisibility="None"
+            HorizontalGridLinesBrush="{DynamicResource Theme_3}"
+            IsReadOnly="True"
+            RowStyle="{DynamicResource CustomDataGridRow}" />
+        <Button
+            x:Name="SelectTableBtn"
+            Height="25"
+            Margin="36,0,36,36"
+            VerticalAlignment="Bottom"
+            Click="SelectTable_Click"
+            Content="{DynamicResource Accept}"
+            Style="{DynamicResource LoginBtnStyle}" />
+        <Button
+            x:Name="ExitBtn"
+            Width="32"
+            Height="32"
+            Margin="0,10,20,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="ExitBtn_Click"
+            Style="{DynamicResource ExitBtnStyle}" />
+        <Label
+            Width="180"
+            Margin="20,6,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="{DynamicResource Tabels}"
+            FontFamily="Roboto"
+            FontSize="20"
+            Foreground="{DynamicResource ThemeForeground}" />
+    </Grid>
+</metroControls:MetroWindow>

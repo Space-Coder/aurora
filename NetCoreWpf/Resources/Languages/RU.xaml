@@ -1,0 +1,46 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Database.Resources.Styles.Language"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="Welcome">Добро пожаловать</sys:String>
+    <sys:String x:Key="Settings">Настройки</sys:String>
+    <sys:String x:Key="Done">Готово</sys:String>
+    <sys:String x:Key="Finish">Закончить</sys:String>
+    <sys:String x:Key="Close">Закрыть</sys:String>
+    <sys:String x:Key="Accept">Принять</sys:String>
+    <sys:String x:Key="Denied">Отказано</sys:String>
+    <sys:String x:Key="Database">База данных</sys:String>
+    <sys:String x:Key="Adress">Адрес</sys:String>
+    <sys:String x:Key="Port">Порт</sys:String>
+    <sys:String x:Key="Timeout">Тайм-аут</sys:String>
+    <sys:String x:Key="Light">Свтелая</sys:String>
+    <sys:String x:Key="Dark">Темная</sys:String>
+    <sys:String x:Key="Theme">Тема</sys:String>
+    <sys:String x:Key="Language">Язык</sys:String>
+    <sys:String x:Key="Connection">Подключение</sys:String>
+    <sys:String x:Key="mbox_Exit">Выход</sys:String>
+    <sys:String x:Key="mbox_ExitText">Вы действительно хотите выйти?</sys:String>
+    <sys:String x:Key="mbox_Confirm">Подтвердите действие</sys:String>
+    <sys:String x:Key="mbox_ConfirmText">Не все поля были заполнены. Вы уверены что хотите продолжить?</sys:String>
+    <sys:String x:Key="mbox_ExceptionNumber">Строка принимает только числа.</sys:String>
+    <sys:String x:Key="btn_Connect">Подключить</sys:String>
+    <sys:String x:Key="Login">Логин</sys:String>
+    <sys:String x:Key="Password">Пароль</sys:String>
+    <sys:String x:Key="Authentication">Аутентификация</sys:String>
+    <sys:String x:Key="WindowsAuthentication">Windows Auth.</sys:String>
+    <sys:String x:Key="SQLAuthentication">SQL Server Auth.</sys:String>
+    <sys:String x:Key="LoginWindowText">Простые Решения Для Упрощения Вашей Жизни</sys:String>
+    <sys:String x:Key="Loginwindow_WelcomeText">Добро пожаловать. Пожалуйста, введите имя пользователя и пароль для подключения к базе данных или используйте аутентификацию через Windows.</sys:String>
+    <sys:String x:Key="LoginWindow_WelcomeTextP2">Это простое приложение предоставляет вам возможность легко управлять вашими данными в базе данных. Aurora - это простой инструмент, который поможет в вашей работе, сделает ее проще и приятнее. Он не требует профессиональных навыков, а его дизайн прост и интуитивно понятен. Все, что вам нужно, это работать и наслаждаться.</sys:String>
+    <sys:String x:Key="Color">Цвет</sys:String>
+    <sys:String x:Key="Personalization">Персональзация</sys:String>
+    <sys:String x:Key="Sign In">Sign In</sys:String>
+    <sys:String x:Key="Tabels">Таблицы</sys:String>
+    <sys:String x:Key="QueryBuilder">SQL конструктор</sys:String>
+    <sys:String x:Key="Enabled">Включено</sys:String>
+    <sys:String x:Key="Disabled">Выключено</sys:String>
+    <sys:String x:Key="About">О программе</sys:String>
+    <sys:String x:Key="Save">Сохранить</sys:String>
+    <sys:String x:Key="LogOut">Выход</sys:String>
+</ResourceDictionary>

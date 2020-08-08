@@ -1,0 +1,94 @@
+﻿<metroControls:MetroWindow
+    x:Class="NetCoreWpf.SQLCmdWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+    xmlns:local="clr-namespace:NetCoreWpf"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:metroControls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:syntax="http://icsharpcode.net/sharpdevelop/avalonedit"
+    Title="Query Builder Window"
+    Width="474"
+    Height="364"
+    Background="{DynamicResource Theme_1}"
+    BorderThickness="1.5"
+    GlowBrush="{DynamicResource Accent700S}"
+    ShowCloseButton="False"
+    ShowMaxRestoreButton="False"
+    ShowMinButton="False"
+    ShowTitleBar="False"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid x:Name="RootGrid">
+        <syntax:TextEditor
+            x:Name="queryTextBox"
+            Margin="0,64,0,62"
+            Background="{DynamicResource Theme_2}"
+            BorderBrush="{DynamicResource Accent400S}"
+            BorderThickness="0,0.5,0,0.5"
+            Foreground="{DynamicResource ThemeForeground}"
+            HorizontalScrollBarVisibility="Hidden"
+            LineNumbersForeground="{DynamicResource ThemeForeground}"
+            ShowLineNumbers="True"
+            SyntaxHighlighting="SQL"
+            VerticalScrollBarVisibility="Auto" />
+        <Button
+            x:Name="ExitBtn"
+            Width="32"
+            Height="32"
+            Margin="0,10,24,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="ExitBtn_Click"
+            Style="{DynamicResource ExitBtnStyle}" />
+        <ToggleButton
+            x:Name="MaxResBtn"
+            Width="32"
+            Height="32"
+            Margin="0,10,56,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="MaxResBtn_Click"
+            Style="{DynamicResource MaxResBtnStyle}" />
+        <Button
+            x:Name="TrayBtn"
+            Width="32"
+            Height="32"
+            Margin="0,10,88,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="MinBtn_Click"
+            Style="{DynamicResource TrayBtnStyle}" />
+        <Button
+            x:Name="executeQuery"
+            Width="105"
+            Height="27"
+            Margin="0,0,15,20"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Click="AcceptBtn_Click"
+            Content="{DynamicResource Accept}"
+            Style="{DynamicResource DefaultBtnStyle}">
+            <Button.Effect>
+                <DropShadowEffect
+                    BlurRadius="7"
+                    Direction="-85"
+                    RenderingBias="Quality"
+                    ShadowDepth="1" />
+            </Button.Effect>
+        </Button>
+        <Label
+            Width="245"
+            Height="39"
+            Margin="30,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Content="{DynamicResource QueryBuilder}"
+            FontFamily="Roboto"
+            FontSize="22"
+            Foreground="{DynamicResource ThemeForeground}" />
+    </Grid>
+</metroControls:MetroWindow>
