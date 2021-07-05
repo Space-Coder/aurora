@@ -50,18 +50,17 @@ namespace NetCoreWpf
         /// Метод подключения к базе данных MS SQL Server
         /// </summary>
         /// <param name="adress">Адрес сервера.</param>
-        /// <param name="port">Порт для подключения.</param>
         /// <param name="timeout">Устанавливает лимит по времени для попытки подключится</param>
         /// <param name="catalog">Имя базы данных к которой будет осуществленно подключение.</param>
         /// <param name="auth">Задает режим аутентификации. Если <see langword="false"/>, аутентификация будет происходить с помощью
         /// User ID и Password. Если <see langword="true"/>, аутентификация будет происходить с помощью проверки подленности Windows</param>
         /// <param name="login">(Только если <paramref name="auth"/> = <see langword="false"/>) Задает логин пользователя MS Sql Server.</param>
         /// <param name="pass">(Только если <paramref name="auth"/> = <see langword="false"/>) Задает пароль пользователя MS Sql Server.</param>
-        public static void OpenConnection(string adress, int port, int timeout, string catalog, bool auth, string login, string pass)
+        public static void OpenConnection(string adress, int timeout, string catalog, bool auth, string login, string pass)
         {
             SqlConnectionStringBuilder _appConStrBuilder = new SqlConnectionStringBuilder()
             {
-                DataSource = "tcp:" + adress + ", " + port,
+                DataSource = adress,
                 ConnectTimeout = timeout,
                 InitialCatalog = catalog,
                 IntegratedSecurity = auth,

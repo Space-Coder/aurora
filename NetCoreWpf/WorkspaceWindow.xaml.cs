@@ -179,7 +179,6 @@ namespace NetCoreWpf
             ManagementObjectSearcher cpuInfo = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor");
             foreach (ManagementObject queryObj in osInfo.Get())
             {
-
                 osLabel.Content = string.Format("{0} Build ({1})", queryObj["Caption"], queryObj["BuildNumber"]);
                 sysTypeLabel.Content = string.Format("{0}", queryObj["OSArchitecture"]);
                 compNameLabel.Content = Environment.MachineName;

@@ -202,20 +202,11 @@
             </Grid.Effect>
             <TextBox
                 x:Name="AdressTxtBox"
-                Width="140"
+                Width="200"
                 Height="19"
-                Margin="20,92,0,0"
-                HorizontalAlignment="Left"
+                Margin="0,92,0,0"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Style="{DynamicResource DefaultTextBoxStyle}"
-                Text=""
-                TextWrapping="Wrap" />
-            <TextBox
-                x:Name="PortTxtBox"
-                Height="19"
-                Margin="170,92,20,0"
-                VerticalAlignment="Top"
-                HorizontalContentAlignment="Center"
                 Style="{DynamicResource DefaultTextBoxStyle}"
                 Text=""
                 TextWrapping="Wrap" />
@@ -253,15 +244,6 @@
                 VerticalAlignment="Top"
                 Background="Transparent"
                 Content="{DynamicResource Adress}"
-                FontFamily="Roboto"
-                FontSize="10"
-                Foreground="{DynamicResource ThemeForeground}" />
-            <Label
-                Height="24"
-                Margin="170,68,20,0"
-                VerticalAlignment="Top"
-                Background="Transparent"
-                Content="{DynamicResource Port}"
                 FontFamily="Roboto"
                 FontSize="10"
                 Foreground="{DynamicResource ThemeForeground}" />

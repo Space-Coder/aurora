@@ -45,13 +45,14 @@ namespace NetCoreWpf
             else
             {
                 NotFluentWindow();
+                
             }
         }
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
             ParseFromString();
-            Server.OpenConnection(AdressTxtBox.Text, portNumber, timeout, DatabaseTxtBox.Text, AuthSlider.IsChecked.Value, LoginBox.Text, PassBox.Password);
+            Server.OpenConnection(AdressTxtBox.Text, timeout, DatabaseTxtBox.Text, AuthSlider.IsChecked.Value, LoginBox.Text, PassBox.Password);
             if (Server.appConnection.State == ConnectionState.Open)
             {
                 new WorkspaceWindow().Show();
@@ -100,7 +101,6 @@ namespace NetCoreWpf
         private void LoadSettings()
         {
             AdressTxtBox.Text = AppSettings.Default.server_adress;
-            PortTxtBox.Text = AppSettings.Default.server_port.ToString();
             TimeoutTxtBox.Text = AppSettings.Default.server_timeout.ToString();
             DatabaseTxtBox.Text = AppSettings.Default.server_catalog;
             AuthSlider.IsChecked = AppSettings.Default.server_auth;
@@ -115,7 +115,6 @@ namespace NetCoreWpf
         {
             ParseFromString();
             AppSettings.Default.server_adress = AdressTxtBox.Text;
-            AppSettings.Default.server_port = portNumber;
             AppSettings.Default.server_timeout = timeout;
             AppSettings.Default.server_catalog = DatabaseTxtBox.Text;
             AppSettings.Default.server_auth = AuthSlider.IsChecked.Value;
@@ -130,9 +129,7 @@ namespace NetCoreWpf
         /// </summary>
         private void ParseFromString()
         {
-            int.TryParse(PortTxtBox.Text, out int _portNumber);
-            int.TryParse(TimeoutTxtBox.Text, out int _timeout);
-            portNumber = _portNumber == 0 ? 1433 : _portNumber;
+            int.TryParse(TimeoutTxtBox.Text, out int _timeout);           
             timeout = _timeout == 0 ? 20 : _timeout;
         }
 
